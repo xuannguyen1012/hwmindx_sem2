@@ -43,17 +43,30 @@
     // console.log(odd(arr));
 
 // bai6
-let employees = [
-    { id: 1, name: "John", workingDays: 22 },
-    { id: 2, name: "Jane", workingDays: 20 },
-    { id: 3, name: "Mark", workingDays: 25 },
-];
+// let employees = [
+//     { id: 1, name: "John", workingDays: 22 },
+//     { id: 2, name: "Jane", workingDays: 20 },
+//     { id: 3, name: "Mark", workingDays: 25 },
+// ];
 
-let totalWorkingDays = 0;
+// let totalWorkingDays = 0;
 
-for (let i = 0; i < employees.length; i++) {
-    totalWorkingDays += employees[i].workingDays;
-}
+// for (let i = 0; i < employees.length; i++) {
+//     totalWorkingDays += employees[i].workingDays;
+// }
 
-console.log(totalWorkingDays); 
+// console.log(totalWorkingDays); 
+
+//bai7
+// let getHighestPaidEmployee = employees => 
+//     employees.reduce((highest, employee) => 
+//         (employee.salary > highest.salary ? employee : highest), employees[0]);
+
+// let employees = [
+//     { id: 1, name: "John", salary: 2000 },
+//     { id: 2, name: "Jane", salary: 2500 },
+//     { id: 3, name: "Mark", salary: 3000 },
+// ];
+
+// console.log(getHighestPaidEmployee(employees));
 
