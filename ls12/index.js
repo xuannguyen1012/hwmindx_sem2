@@ -69,3 +69,101 @@
 // ];
 
 // console.log(getHighestPaidEmployee(employees));
+
+//bai8
+
+// const employees = [
+//     { id: 1, name: "John", workingDays: 22, lateDays: 2 },
+//     { id: 2, name: "Jane", workingDays: 20, lateDays: 0 },
+//     { id: 3, name: "Mark", workingDays: 25, lateDays: 1 },
+// ];
+
+// let max = employees[0].workingDays - employees[0].lateDays;
+// let indexMax = 0;
+
+// for (let i = 0; i < employees.length;i++) {
+//     const element = employees[i]
+//     const world = (element.workingDays - element.lateDays)
+//     if (world > max) {
+//         max = works
+//         indexMax =i
+//     }
+// }
+
+//bai 9
+// const employees = [
+//     { id: 1, name: "John", salary: 2000 },
+//     { id: 2, name: "Jane", salary: 2500 },
+//     { id: 3, name: "Mark", salary: 3000 },
+//     { id: 4, name: "John", salary: 2200 },
+// ];
+
+// const groupedEmployees = {};
+// employees.forEach(employee => {
+    
+//     if (!groupedEmployees[employee.name]) {
+//         groupedEmployees[employee.name] = [];
+//     }
+//     groupedEmployees[employee.name].push(employee);
+// });
+// console.log(groupedEmployees);
+
+// bai10
+
+// const employees = [
+//     { id: 1, name: "John", workingDays: 22, lateDays: 2, salary: 2000 },
+//     { id: 2, name: "Jane", workingDays: 25, lateDays: 0, salary: 2500 },
+//     { id: 3, name: "Mark", workingDays: 20, lateDays: 1, salary: 3000 },
+//   ];
+  
+//   let highestEfficiency = 0;
+//   let highestEfficiencyEmployee = null;
+  
+//   for (let i = 0; i < employees.length; i++) {
+//     const employee = employees[i];
+//     const efficiency = employee.workingDays / employee.salary;
+  
+//     if (efficiency > highestEfficiency) {
+//       highestEfficiency = efficiency;
+//       highestEfficiencyEmployee = employee;
+//     }
+//   }
+  
+//   console.log(highestEfficiencyEmployee); 
+
+//bai11
+// const employees = [
+//     { id: 1, name: "John", workingDays: 20 },
+//     { id: 2, name: "Jane", workingDays: 22 },
+//     { id: 3, name: "Mark", workingDays: 20 },
+//     { id: 4, name: "Sam", workingDays: 24 },
+//     { id: 5, name: "Lucy", workingDays: 22 },
+//   ];
+  
+//   const bieuDo = {};
+  
+//   for (const employee of employees) {
+//     const workingDays = employee.workingDays;
+//     if (bieuDo[workingDays]) {
+//       bieuDo[workingDays]++;
+//     } else {
+//       bieuDo[workingDays] = 1;
+//     }
+//   }
+  
+//   console.log(bieuDo); 
+
+//bai12
+const employees = [
+    { id: 1, name: "John", email: "john@example.com", workingDays: 22, lateDays: 2, salary: 2000 },
+    { id: 2, name: "Jane", email: "jane@example.com", workingDays: 20, lateDays: 0, salary: 2500 },
+    { id: 3, name: "Mark", email: "mark@example.com", workingDays: 25, lateDays: 1, salary: 3000 },
+];
+
+const newEmployees = employees.map(employee => ({
+    name: employee.name,
+    email: employee.email,
+    workInfo: { workingDays: employee.workingDays, lateDays: employee.lateDays }
+}));
+
+console.log(newEmployees);
