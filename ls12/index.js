@@ -182,11 +182,15 @@ const addTask = (name, description) => {
 
 const markTasksCompleted = (taskList, taskNames) => {
     taskList.forEach(task => {
-        if (taskNames.includes(task.name)) {
-            task.completed = true;
+        for (let i = 0; i < taskNames.length; i++) {
+            if (task.name == taskNames[i]) {
+                task.completed = true;
+                break;
+            }
         }
     });
 };
+
 
 const sortTasksByName = (taskList, order = 'asc') => {
     taskList.sort((a, b) => {
