@@ -154,16 +154,44 @@
 //   console.log(bieuDo); 
 
 //bai12
-const employees = [
-    { id: 1, name: "John", email: "john@example.com", workingDays: 22, lateDays: 2, salary: 2000 },
-    { id: 2, name: "Jane", email: "jane@example.com", workingDays: 20, lateDays: 0, salary: 2500 },
-    { id: 3, name: "Mark", email: "mark@example.com", workingDays: 25, lateDays: 1, salary: 3000 },
+// const employees = [
+//     { id: 1, name: "John", email: "john@example.com", workingDays: 22, lateDays: 2, salary: 2000 },
+//     { id: 2, name: "Jane", email: "jane@example.com", workingDays: 20, lateDays: 0, salary: 2500 },
+//     { id: 3, name: "Mark", email: "mark@example.com", workingDays: 25, lateDays: 1, salary: 3000 },
+// ];
+
+// const newEmployees = employees.map(employee => ({
+//     name: employee.name,
+//     email: employee.email,
+//     workInfo: { workingDays: employee.workingDays, lateDays: employee.lateDays }
+// }));
+
+// console.log(newEmployees);
+
+// bai13
+
+let tasks = [ 
+    { name: "Hoàn thành bài tập JavaScript", description: "Làm xong bài tập về Array và Object", completed: false },
+    { name: "Đọc sách", description: "Đọc xong chương 3", completed: true },
+    { name: "Đi mua hàng", description: "Mua thêm thức ăn cho tuần", completed: false }
 ];
 
-const newEmployees = employees.map(employee => ({
-    name: employee.name,
-    email: employee.email,
-    workInfo: { workingDays: employee.workingDays, lateDays: employee.lateDays }
-}));
+const addTask = (name, description) => {
+    tasks.push({ name, description, completed: false });
+};
 
-console.log(newEmployees);
+const markTasksCompleted = (taskList, taskNames) => {
+    taskList.forEach(task => {
+        if (taskNames.includes(task.name)) {
+            task.completed = true;
+        }
+    });
+};
+
+const sortTasksByName = (taskList, order = 'asc') => {
+    taskList.sort((a, b) => {
+        if (a.name < b.name) return order === 'asc' ? -1 : 1;
+        if (a.name > b.name) return order === 'asc' ? 1 : -1;
+        return 0;
+    });
+};9
